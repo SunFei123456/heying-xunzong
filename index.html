@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>鹤影寻踪 | 农文旅沉浸式体验</title>
+    
+    <!-- 引入 Remix Icon -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+    
+    <!-- 自定义 CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+
+    <!-- 导航栏 -->
+    <nav id="navbar" class="navbar">
+        <div class="nav-content">
+            <div class="logo">
+                <a href="index.html" class="flex items-center gap-2">
+                    <span class="logo-dot"></span>
+                    鹤影寻踪
+                </a>
+            </div>
+            <div class="nav-links">
+                <a href="classroom.html">鹤韵课堂</a>
+                <a href="routes.html">鹤游线路</a>
+                <a href="goods.html">鹤乡好物</a>
+                <a href="community.html">鹤友社群</a>
+            </div>
+            <div class="mobile-menu-btn">
+                <i class="ri-menu-line"></i>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 首屏 Hero Section -->
+    <header class="hero">
+        <!-- 背景图层 -->
+        <div class="hero-bg-wrapper">
+            <div class="hero-overlay"></div>
+            <img id="hero-bg" src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?q=80&w=2070&auto=format&fit=crop" alt="山水背景">
+        </div>
+
+        <!-- 内容层 -->
+        <div class="hero-content">
+            <div style="overflow: hidden;">
+                <h2 class="hero-subtitle">一次农文旅沉浸式体验之旅</h2>
+            </div>
+            
+            <div style="overflow: hidden;">
+                <h1 class="hero-title">
+                    鹤影<span class="dot-red">.</span>寻踪
+                </h1>
+            </div>
+
+            <div class="hero-cta">
+                <a href="classroom.html" class="btn">
+                    <span>开启旅程</span>
+                    <i class="ri-arrow-down-line"></i>
+                </a>
+            </div>
+        </div>
+
+        <!-- 滚动提示 -->
+        <div class="scroll-indicator">
+            SCROLL
+        </div>
+    </header>
+
+    <!-- 页脚 -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <h3>鹤影<span class="text-crane-red">.</span>寻踪</h3>
+                    <p>农文旅沉浸式体验平台</p>
+                </div>
+                <div class="footer-links">
+                    <a href="#">关于我们</a>
+                    <a href="#">联系合作</a>
+                    <a href="#">隐私政策</a>
+                </div>
+                <div class="footer-social">
+                    <a href="#"><i class="ri-wechat-line"></i></a>
+                    <a href="#"><i class="ri-weibo-line"></i></a>
+                    <a href="#"><i class="ri-douyin-line"></i></a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 鹤影寻踪. All Rights Reserved. Designed by 孙飞</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- GSAP 动画库 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/ScrollTrigger.min.js"></script>
+    
+    <!-- 逻辑 JS -->
+    <script src="js/main.js"></script>
+</body>
+</html>

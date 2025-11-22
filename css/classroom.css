@@ -1,0 +1,145 @@
+@charset "UTF-8";
+
+/* =========================================
+   鹤韵课堂 (Classroom Section)
+   ========================================= */
+.section-classroom {
+    padding: var(--spacing-xl) 0;
+    position: relative;
+    background-color: var(--color-paper);
+    min-height: 80vh;
+}
+
+.bg-texture {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.05;
+    background-image: url('https://www.transparenttextures.com/patterns/rice-paper.png');
+    pointer-events: none;
+    z-index: 0;
+}
+
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    margin-top: 60px;
+    position: relative;
+    z-index: 1;
+}
+
+.card {
+    position: relative;
+    cursor: pointer;
+    transition: transform 0.5s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+/* 第二个卡片错落布局 */
+.card:nth-child(2) {
+    margin-top: -60px; 
+}
+
+.card-image-wrapper {
+    height: 400px;
+    overflow: hidden;
+    position: relative;
+    margin-bottom: 25px;
+    border-radius: 2px; /* 微圆角 */
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    transition: box-shadow 0.5s ease;
+}
+
+.card:hover .card-image-wrapper {
+    box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+}
+
+.card-image-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94), filter 0.5s ease;
+    filter: grayscale(20%);
+}
+
+.card:hover .card-image-wrapper img {
+    transform: scale(1.15);
+    filter: grayscale(0%);
+}
+
+.card-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.2);
+    transition: background 0.5s ease;
+}
+
+.card:hover .card-overlay {
+    background: rgba(0,0,0,0);
+}
+
+.card-number {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    width: 40px;
+    height: 40px;
+    border: 1px solid rgba(255,255,255,0.6);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-family: var(--font-serif);
+    backdrop-filter: blur(5px);
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+}
+
+.card:hover .card-number {
+    background: var(--color-red);
+    border-color: var(--color-red);
+}
+
+.card h3 {
+    font-family: var(--font-serif);
+    font-size: 1.6rem;
+    margin-bottom: 12px;
+    transition: color 0.3s ease;
+    position: relative;
+    display: inline-block;
+}
+
+.card:hover h3 {
+    color: var(--color-red);
+}
+
+.card p {
+    font-size: 0.95rem;
+    color: #666;
+    line-height: 1.8;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+/* 响应式 */
+@media (max-width: 768px) {
+    .card-grid {
+        grid-template-columns: 1fr;
+        gap: 60px;
+    }
+    .card:nth-child(2) {
+        margin-top: 0;
+    }
+}

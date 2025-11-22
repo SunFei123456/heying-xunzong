@@ -1,0 +1,294 @@
+@charset "UTF-8";
+
+/* =========================================
+   1. 核心变量配置 (CSS Variables)
+   ========================================= */
+:root {
+    /* 色板 Palette */
+    --color-ink: #1A1A1A;       /* 墨黑 */
+    --color-paper: #F7F5F0;     /* 宣纸白 */
+    --color-red: #C43C33;       /* 丹顶红 */
+    --color-bamboo: #7A9087;    /* 竹青 */
+    --color-mist: #E6E8EB;      /* 云雾灰 */
+    --color-white: #ffffff;
+    
+    /* 字体 Fonts */
+    --font-serif: "Noto Serif SC", "Source Han Serif SC", "Songti SC", SimSun, serif;
+    --font-sans: "Inter", "Noto Sans SC", sans-serif;
+    
+    /* 间距 Spacing */
+    --spacing-xs: 0.5rem;
+    --spacing-sm: 1rem;
+    --spacing-md: 2rem;
+    --spacing-lg: 4rem;
+    --spacing-xl: 8rem;
+
+    /* 布局 Layout */
+    --container-width: 1200px;
+    --nav-height: 80px;
+}
+
+/* =========================================
+   2. 全局重置 (Reset & Base)
+   ========================================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-size: 16px;
+}
+
+body {
+    font-family: var(--font-sans);
+    background-color: var(--color-paper);
+    color: var(--color-ink);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: color 0.3s ease;
+}
+
+ul {
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+/* =========================================
+   3. 通用组件 (Components)
+   ========================================= */
+.container {
+    max-width: var(--container-width);
+    margin: 0 auto;
+    padding: 0 var(--spacing-sm);
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 15px 35px;
+    border-radius: 50px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(5px);
+    color: var(--color-white);
+    font-family: var(--font-serif);
+    letter-spacing: 2px;
+    transition: all 0.5s ease;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background: var(--color-red);
+    border-color: var(--color-red);
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: var(--spacing-lg);
+}
+
+.section-title .sub {
+    display: block;
+    color: var(--color-red);
+    letter-spacing: 3px;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.section-title h2 {
+    font-family: var(--font-serif);
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.section-title .divider {
+    width: 50px;
+    height: 4px;
+    background-color: var(--color-bamboo);
+    margin: 0 auto;
+}
+
+.section-title p {
+    margin-top: 20px;
+    color: #666;
+    font-weight: 300;
+}
+
+/* =========================================
+   4. 导航栏 (Navbar)
+   ========================================= */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    padding: 20px 40px;
+    transition: all 0.5s ease;
+    color: var(--color-paper);
+    mix-blend-mode: difference; 
+}
+
+.navbar.scrolled {
+    background: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(10px);
+    padding: 15px 40px;
+    mix-blend-mode: normal; 
+}
+
+.nav-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: var(--container-width);
+    margin: 0 auto;
+}
+
+.logo {
+    font-family: var(--font-serif);
+    font-size: 1.5rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo-dot {
+    width: 12px;
+    height: 12px;
+    background-color: var(--color-red);
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.nav-links {
+    display: flex;
+    gap: 40px;
+}
+
+.nav-links a {
+    font-family: var(--font-serif);
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+    opacity: 0.9;
+}
+
+.nav-links a.active-link, .nav-links a:hover {
+    color: var(--color-red);
+}
+
+/* 移动端菜单按钮 */
+.mobile-menu-btn {
+    display: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+/* =========================================
+   5. 页脚 (Footer)
+   ========================================= */
+.footer {
+    background: #111;
+    color: #666;
+    padding: 80px 0 30px;
+    font-size: 0.9rem;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 50px;
+    border-bottom: 1px solid #222;
+    padding-bottom: 50px;
+}
+
+.footer-brand h3 {
+    color: white;
+    font-family: var(--font-serif);
+    font-size: 1.5rem;
+    margin-bottom: 5px;
+}
+
+.footer-links {
+    display: flex;
+    gap: 40px;
+}
+
+.footer-links a:hover {
+    color: white;
+}
+
+.footer-social {
+    display: flex;
+    gap: 20px;
+}
+
+.footer-social a {
+    width: 40px;
+    height: 40px;
+    background: #222;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    font-size: 1.2rem;
+}
+
+.footer-social a:hover {
+    background: var(--color-red);
+    color: white;
+}
+
+.footer-bottom {
+    text-align: center;
+    font-size: 0.8rem;
+    color: #444;
+}
+
+/* =========================================
+   6. 响应式基础 (Responsive Base)
+   ========================================= */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none; 
+    }
+    
+    .mobile-menu-btn {
+        display: block;
+    }
+
+    .navbar {
+        padding: 15px 20px;
+    }
+    
+    .footer-content {
+        flex-direction: column;
+        gap: 40px;
+        text-align: center;
+    }
+    
+    .footer-links {
+        flex-direction: column;
+        gap: 15px;
+    }
+}
