@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,10 +9,11 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/classroom.css">
 </head>
+
 <body>
 
     <!-- 导航栏 -->
-    <nav id="navbar" class="navbar scrolled"> <!-- 子页面默认有深色背景 -->
+    <nav id="navbar" class="navbar"> <!-- 子页面默认有深色背景 -->
         <div class="nav-content">
             <div class="logo">
                 <a href="index.html" class="flex items-center gap-2">
@@ -31,51 +33,149 @@
         </div>
     </nav>
 
-    <!-- 鹤韵课堂 -->
-    <section id="classroom" class="section-classroom" style="padding-top: 120px;">
-        <!-- 水墨装饰背景 -->
-        <div class="bg-texture"></div>
-        
+    <!-- Hero Section -->
+    <header class="hero">
+        <div id="hero-bg">
+            <img src="https://images.unsplash.com/photo-1584650548401-e528553e22a9?q=80&w=1974&auto=format&fit=crop"
+                alt="鹤韵课堂">
+        </div>
         <div class="container">
-            <div class="section-title">
-                <span class="sub">Culture Class</span>
-                <h2>鹤韵课堂</h2>
-                <div class="divider"></div>
-                <p>学习鹤壁非遗文化，溯望历史底蕴。</p>
+            <div class="hero-content">
+                <span class="hero-subtitle">Culture Class</span>
+                <h1 class="hero-title">鹤韵课堂</h1>
+                <div class="hero-cta">
+                    <a href="#classroom" class="btn">开始学习</a>
+                </div>
             </div>
-            
-            <div class="card-grid">
-                <!-- 卡片 1 -->
-                <div class="card">
-                    <div class="card-image-wrapper">
-                        <img src="https://images.unsplash.com/photo-1584650548401-e528553e22a9?q=80&w=1974&auto=format&fit=crop" alt="非遗技艺">
-                        <div class="card-overlay"></div>
-                        <div class="card-number">01</div>
+        </div>
+    </header>
+
+    <!-- 模块1: 非遗技艺课堂 -->
+    <section id="module-1" class="section-module">
+        <div class="bg-texture"></div>
+        <div class="container">
+            <div class="module-header">
+                <span class="sub">Intangible Cultural Heritage</span>
+                <h2>非遗技艺课堂</h2>
+                <div class="divider"></div>
+                <p>泥咕咕、剪纸等传统技艺的数字化展示与教学，让指尖的艺术代代相传。</p>
+            </div>
+            <div class="video-grid">
+                <div class="video-card">
+                    <div class="video-thumb">
+                        <img src="https://images.unsplash.com/photo-1584650548401-e528553e22a9?q=80&w=1974&auto=format&fit=crop"
+                            alt="泥咕咕制作">
+                        <div class="play-btn"><i class="ri-play-circle-line"></i></div>
                     </div>
-                    <h3>非遗技艺课堂</h3>
-                    <p>泥咕咕、剪纸等传统技艺的数字化展示与教学，让指尖的艺术代代相传。</p>
+                    <div class="video-info">
+                        <h4>泥咕咕制作工艺基础</h4>
+                        <span>12:30</span>
+                    </div>
                 </div>
-                
-                 <!-- 卡片 2 -->
-                 <div class="card">
-                    <div class="card-image-wrapper">
-                        <img src="https://images.unsplash.com/photo-1599707367072-cd6ad66acc40?q=80&w=1974&auto=format&fit=crop" alt="文化溯源">
-                        <div class="card-overlay"></div>
-                        <div class="card-number">02</div>
+                <div class="video-card">
+                    <div class="video-thumb">
+                        <img src="https://images.unsplash.com/photo-1589590993388-17c004929b8e?q=80&w=2070&auto=format&fit=crop"
+                            alt="剪纸教学">
+                        <div class="play-btn"><i class="ri-play-circle-line"></i></div>
                     </div>
-                    <h3>鹤壁文化溯源</h3>
-                    <p>探寻诗经卫风起源，感受淇水流觞的千年文脉，重走古人之路。</p>
+                    <div class="video-info">
+                        <h4>鹤壁剪纸入门教学</h4>
+                        <span>15:45</span>
+                    </div>
                 </div>
-                
-                 <!-- 卡片 3 -->
-                 <div class="card">
-                    <div class="card-image-wrapper">
-                        <img src="https://images.unsplash.com/photo-1544163470-4522249d2152?q=80&w=2038&auto=format&fit=crop" alt="传承人访谈">
-                        <div class="card-overlay"></div>
-                        <div class="card-number">03</div>
+                <div class="video-card">
+                    <div class="video-thumb">
+                        <img src="https://images.unsplash.com/photo-1606758669514-680353e55e33?q=80&w=2070&auto=format&fit=crop"
+                            alt="彩绘技巧">
+                        <div class="play-btn"><i class="ri-play-circle-line"></i></div>
                     </div>
-                    <h3>传承人访谈录</h3>
-                    <p>聆听老一辈手艺人的故事，见证匠心传承，记录那些即将消逝的声音。</p>
+                    <div class="video-info">
+                        <h4>传统彩绘上色技巧</h4>
+                        <span>09:20</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 模块2: 鹤壁文化溯源 -->
+    <section id="module-2" class="section-module alt-bg">
+        <div class="container">
+            <div class="module-header">
+                <span class="sub">Cultural Origins</span>
+                <h2>鹤壁文化溯源</h2>
+                <div class="divider"></div>
+                <p>探寻诗经卫风起源，感受淇水流觞的千年文脉，重走古人之路。</p>
+            </div>
+            <div class="video-grid">
+                <div class="video-card">
+                    <div class="video-thumb">
+                        <img src="https://images.unsplash.com/photo-1599707367072-cd6ad66acc40?q=80&w=1974&auto=format&fit=crop"
+                            alt="诗经卫风">
+                        <div class="play-btn"><i class="ri-play-circle-line"></i></div>
+                    </div>
+                    <div class="video-info">
+                        <h4>《诗经·卫风》中的淇河</h4>
+                        <span>20:15</span>
+                    </div>
+                </div>
+                <div class="video-card">
+                    <div class="video-thumb">
+                        <img src="https://images.unsplash.com/photo-1518020382113-a7e8fc38eac9?q=80&w=2034&auto=format&fit=crop"
+                            alt="古都朝歌">
+                        <div class="play-btn"><i class="ri-play-circle-line"></i></div>
+                    </div>
+                    <div class="video-info">
+                        <h4>古都朝歌的历史变迁</h4>
+                        <span>18:40</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 模块3: 传承人访谈录 -->
+    <section id="module-3" class="section-module">
+        <div class="container">
+            <div class="module-header">
+                <span class="sub">Inheritor Interviews</span>
+                <h2>传承人访谈录</h2>
+                <div class="divider"></div>
+                <p>聆听老一辈手艺人的故事，见证匠心传承，记录那些即将消逝的声音。</p>
+            </div>
+            <div class="video-grid">
+                <div class="video-card">
+                    <div class="video-thumb">
+                        <img src="https://images.unsplash.com/photo-1544163470-4522249d2152?q=80&w=2038&auto=format&fit=crop"
+                            alt="访谈1">
+                        <div class="play-btn"><i class="ri-play-circle-line"></i></div>
+                    </div>
+                    <div class="video-info">
+                        <h4>对话泥咕咕传承人张师傅</h4>
+                        <span>25:00</span>
+                    </div>
+                </div>
+                <div class="video-card">
+                    <div class="video-thumb">
+                        <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?q=80&w=1887&auto=format&fit=crop"
+                            alt="访谈2">
+                        <div class="play-btn"><i class="ri-play-circle-line"></i></div>
+                    </div>
+                    <div class="video-info">
+                        <h4>坚守五十年的剪纸艺人</h4>
+                        <span>22:10</span>
+                    </div>
+                </div>
+                <div class="video-card">
+                    <div class="video-thumb">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=1887&auto=format&fit=crop"
+                            alt="访谈3">
+                        <div class="play-btn"><i class="ri-play-circle-line"></i></div>
+                    </div>
+                    <div class="video-info">
+                        <h4>青年传承者的创新之路</h4>
+                        <span>16:30</span>
+                    </div>
                 </div>
             </div>
         </div>
@@ -110,4 +210,5 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/ScrollTrigger.min.js"></script>
     <script src="js/main.js"></script>
 </body>
+
 </html>

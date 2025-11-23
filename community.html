@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,10 +9,11 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/community.css">
 </head>
+
 <body>
 
     <!-- 导航栏 -->
-    <nav id="navbar" class="navbar scrolled">
+    <nav id="navbar" class="navbar">
         <div class="nav-content">
             <div class="logo">
                 <a href="index.html" class="flex items-center gap-2">
@@ -31,73 +33,162 @@
         </div>
     </nav>
 
-    <!-- 鹤友社群 -->
+    <!-- Hero Section -->
+    <header class="hero">
+        <div id="hero-bg">
+            <img src="https://images.unsplash.com/photo-1523906834658-6e24ef2386f9?q=80&w=1883&auto=format&fit=crop"
+                alt="鹤友社群">
+        </div>
+        <div class="container">
+            <div class="hero-content">
+                <span class="hero-subtitle">Community</span>
+                <h1 class="hero-title">鹤友社群</h1>
+                <div class="hero-cta">
+                    <a href="#community" class="btn">加入我们</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- 社群内容区 -->
     <section id="community" class="section-community">
-        <div class="community-bg"></div>
-        <div class="container relative z-10" style="padding-top: 120px;">
-            <div class="section-title light">
-                <span class="sub">Community</span>
-                <h2>鹤友社群</h2>
-                <div class="divider"></div>
-                <p class="text-white/80">分享你的旅途故事，遇见志同道合的伙伴。</p>
+        <div class="container">
+            <!-- 顶部话题分类 -->
+            <div class="community-header">
+                <div class="topic-filters">
+                    <button class="topic-btn active">全部</button>
+                    <button class="topic-btn"><i class="ri-camera-lens-line"></i> 摄影打卡</button>
+                    <button class="topic-btn"><i class="ri-restaurant-2-line"></i> 美食探店</button>
+                    <button class="topic-btn"><i class="ri-ancient-pavilion-line"></i> 文化交流</button>
+                    <button class="topic-btn"><i class="ri-question-answer-line"></i> 问答求助</button>
+                </div>
+                <button class="btn-primary-outline"><i class="ri-add-line"></i> 发布笔记</button>
             </div>
 
-            <div class="community-wall">
-                <div class="wall-col">
-                    <div class="wall-item">
-                        <img src="https://images.unsplash.com/photo-1523906834658-6e24ef2386f9?q=80&w=1883&auto=format&fit=crop" alt="User">
-                        <div class="wall-content">
-                            <p>“古村的清晨太美了，仿佛穿越回了古代。”</p>
+            <!-- 瀑布流内容 -->
+            <div class="masonry-grid">
+                <!-- 笔记卡片 1 -->
+                <div class="note-card">
+                    <div class="note-img">
+                        <img src="https://images.unsplash.com/photo-1523906834658-6e24ef2386f9?q=80&w=1883&auto=format&fit=crop"
+                            alt="古村">
+                        <span class="note-tag">摄影</span>
+                    </div>
+                    <div class="note-content">
+                        <h3 class="note-title">藏在深山里的千年古村，美哭了！</h3>
+                        <div class="note-footer">
                             <div class="user-info">
                                 <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Avatar">
-                                <span>@小鹤爱旅游</span>
+                                <span>小鹤爱旅游</span>
                             </div>
-                        </div>
-                    </div>
-                    <div class="wall-item">
-                         <img src="https://images.unsplash.com/photo-1516483638261-f4dbaf036963?q=80&w=1886&auto=format&fit=crop" alt="User">
-                        <div class="wall-content">
-                            <p>“带着孩子来体验挖花生，很有教育意义！”</p>
-                            <div class="user-info">
-                                <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Avatar">
-                                <span>@张爸爸</span>
+                            <div class="note-stats">
+                                <span><i class="ri-heart-line"></i> 128</span>
                             </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="wall-col mt-12">
-                    <div class="wall-item">
-                        <img src="https://images.unsplash.com/photo-1471922694854-ff1b63b20054?q=80&w=2072&auto=format&fit=crop" alt="User">
-                        <div class="wall-content">
-                            <p>“泥咕咕比想象中难捏，但是很有趣！”</p>
-                            <div class="user-info">
-                                <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Avatar">
-                                <span>@艺术生小李</span>
-                            </div>
-                        </div>
-                    </div>
-                     <div class="wall-item">
-                        <div class="wall-content p-8 bg-white/10 backdrop-blur-md rounded-lg text-center flex flex-col items-center justify-center h-full">
-                           <i class="ri-camera-3-line text-4xl mb-4 text-crane-red"></i>
-                            <p class="mb-4">已有 12,450 位鹤友加入</p>
-                            <a href="#" class="btn">立即加入</a>
                         </div>
                     </div>
                 </div>
 
-                <div class="wall-col">
-                    <div class="wall-item">
-                         <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?q=80&w=1887&auto=format&fit=crop" alt="User">
-                        <div class="wall-content">
-                            <p>“鹤壁的风景被低估了，强烈推荐云梦山。”</p>
+                <!-- 笔记卡片 2 -->
+                <div class="note-card">
+                    <div class="note-img">
+                        <img src="https://images.unsplash.com/photo-1600610959212-6344f6235015?q=80&w=1974&auto=format&fit=crop"
+                            alt="大伾山">
+                        <span class="note-tag">攻略</span>
+                    </div>
+                    <div class="note-content">
+                        <h3 class="note-title">大伾山一日游保姆级攻略，建议收藏！</h3>
+                        <p class="note-desc">从郑州出发，只要2小时就能到达这个宝藏景点...</p>
+                        <div class="note-footer">
                             <div class="user-info">
-                                <img src="https://randomuser.me/api/portraits/men/85.jpg" alt="Avatar">
-                                <span>@摄影师大卫</span>
+                                <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Avatar">
+                                <span>张爸爸</span>
+                            </div>
+                            <div class="note-stats">
+                                <span><i class="ri-heart-line"></i> 342</span>
                             </div>
                         </div>
                     </div>
                 </div>
+
+                <!-- 笔记卡片 3 -->
+                <div class="note-card">
+                    <div class="note-img">
+                        <img src="https://images.unsplash.com/photo-1516483638261-f4dbaf036963?q=80&w=1886&auto=format&fit=crop"
+                            alt="非遗">
+                        <span class="note-tag">文化</span>
+                    </div>
+                    <div class="note-content">
+                        <h3 class="note-title">第一次体验捏泥咕咕，非遗传承人手把手教学</h3>
+                        <div class="note-footer">
+                            <div class="user-info">
+                                <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Avatar">
+                                <span>艺术生小李</span>
+                            </div>
+                            <div class="note-stats">
+                                <span><i class="ri-heart-line"></i> 89</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 笔记卡片 4 -->
+                <div class="note-card">
+                    <div class="note-img">
+                        <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?q=80&w=1887&auto=format&fit=crop"
+                            alt="云梦山">
+                        <span class="note-tag">摄影</span>
+                    </div>
+                    <div class="note-content">
+                        <h3 class="note-title">云梦山的日落，是我见过最温柔的颜色</h3>
+                        <p class="note-desc">一定要等到下午6点，光线最好的时候...</p>
+                        <div class="note-footer">
+                            <div class="user-info">
+                                <img src="https://randomuser.me/api/portraits/men/85.jpg" alt="Avatar">
+                                <span>摄影师大卫</span>
+                            </div>
+                            <div class="note-stats">
+                                <span><i class="ri-heart-line"></i> 567</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 笔记卡片 5 -->
+                <div class="note-card">
+                    <div class="note-img">
+                        <img src="https://images.unsplash.com/photo-1543076066-2d7972719090?q=80&w=1974&auto=format&fit=crop"
+                            alt="古城">
+                        <span class="note-tag">探店</span>
+                    </div>
+                    <div class="note-content">
+                        <h3 class="note-title">浚县古城里的这家咖啡馆，太有感觉了</h3>
+                        <div class="note-footer">
+                            <div class="user-info">
+                                <img src="https://randomuser.me/api/portraits/women/22.jpg" alt="Avatar">
+                                <span>CoffeeLover</span>
+                            </div>
+                            <div class="note-stats">
+                                <span><i class="ri-heart-line"></i> 201</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 加入卡片 -->
+                <div class="note-card join-card">
+                    <div class="join-content">
+                        <div class="icon-circle">
+                            <i class="ri-add-line"></i>
+                        </div>
+                        <h3>成为鹤友</h3>
+                        <p>分享你的鹤壁故事</p>
+                        <a href="#" class="btn-sm-primary">立即发布</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="load-more">
+                <button class="btn-ghost">加载更多精彩笔记 <i class="ri-arrow-down-s-line"></i></button>
             </div>
         </div>
     </section>
@@ -131,4 +222,5 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/ScrollTrigger.min.js"></script>
     <script src="js/main.js"></script>
 </body>
+
 </html>

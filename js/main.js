@@ -21,26 +21,26 @@ function initHeroAnimation() {
         duration: 2,
         ease: "power2.out"
     })
-    // 副标题上浮
-    .to(".hero-subtitle", {
-        opacity: 1,
-        y: 0,
-        duration: 1,
-        ease: "power3.out"
-    }, "-=1.5")
-    // 主标题上浮
-    .to(".hero-title", {
-        opacity: 1,
-        y: 0,
-        duration: 1.2,
-        ease: "power3.out"
-    }, "-=0.8")
-    // 按钮出现
-    .to(".hero-cta", {
-        opacity: 1,
-        duration: 0.8,
-        ease: "power2.inOut"
-    }, "-=0.5");
+        // 副标题上浮
+        .to(".hero-subtitle", {
+            opacity: 1,
+            y: 0,
+            duration: 1,
+            ease: "power3.out"
+        }, "-=1.5")
+        // 主标题上浮
+        .to(".hero-title", {
+            opacity: 1,
+            y: 0,
+            duration: 1.2,
+            ease: "power3.out"
+        }, "-=0.8")
+        // 按钮出现
+        .to(".hero-cta", {
+            opacity: 1,
+            duration: 0.8,
+            ease: "power2.inOut"
+        }, "-=0.5");
 
     // 视差滚动效果 (Parallax)
     gsap.to("#hero-bg", {
@@ -61,7 +61,7 @@ function initNavbarEffect() {
 
     window.addEventListener('scroll', () => {
         let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-        
+
         // 向下滚动添加背景
         if (scrollTop > 100) {
             navbar.classList.add('scrolled');
@@ -73,41 +73,45 @@ function initNavbarEffect() {
 
 // 3. 鹤韵课堂板块动画
 function initClassroomAnimation() {
-    // 标题部分动画
-    gsap.from(".section-title > *", {
-        scrollTrigger: {
-            trigger: ".section-classroom",
-            start: "top 80%", // 当元素顶部到达视口 80% 处触发
-            toggleActions: "play none none reverse"
-        },
-        y: 50,
-        opacity: 0,
-        duration: 1,
-        stagger: 0.2, // 依次触发
-        ease: "power3.out"
-    });
+    // 遍历所有模块进行动画设置
+    const modules = gsap.utils.toArray('.section-module');
 
-    // 卡片部分动画
-    gsap.from(".card", {
-        scrollTrigger: {
-            trigger: ".card-grid",
-            start: "top 85%",
-        },
-        y: 100,
-        opacity: 0,
-        duration: 1.2,
-        stagger: 0.3,
-        ease: "power4.out"
+    modules.forEach(module => {
+        // 标题部分动画
+        gsap.from(module.querySelectorAll('.module-header > *'), {
+            scrollTrigger: {
+                trigger: module,
+                start: "top 80%",
+            },
+            y: 30,
+            opacity: 0,
+            duration: 1,
+            stagger: 0.1,
+            ease: "power3.out"
+        });
+
+        // 视频卡片动画
+        gsap.from(module.querySelectorAll('.video-card'), {
+            scrollTrigger: {
+                trigger: module.querySelector('.video-grid'),
+                start: "top 85%",
+            },
+            y: 50,
+            opacity: 0,
+            duration: 1,
+            stagger: 0.15,
+            ease: "power3.out"
+        });
     });
 }
 
 // 4. 鹤游线路动画
 function initRoutesAnimation() {
     const rows = gsap.utils.toArray('.route-row');
-    
+
     rows.forEach((row, i) => {
         const isReverse = row.classList.contains('reverse');
-        
+
         // 图片进场
         gsap.from(row.querySelector('.route-img'), {
             scrollTrigger: {
@@ -133,6 +137,20 @@ function initRoutesAnimation() {
             ease: "power3.out"
         });
     });
+    // 鹤望景区动画
+    if (document.querySelector('.section-spots')) {
+        gsap.from(".spot-card", {
+            scrollTrigger: {
+                trigger: ".spots-grid",
+                start: "top 85%",
+            },
+            y: 50,
+            opacity: 0,
+            duration: 0.8,
+            stagger: 0.1,
+            ease: "power2.out"
+        });
+    }
 }
 
 // 5. 鹤乡好物动画
@@ -152,18 +170,15 @@ function initGoodsAnimation() {
 
 // 6. 鹤友社群动画
 function initCommunityAnimation() {
-    gsap.from(".wall-item", {
+    gsap.from(".note-card", {
         scrollTrigger: {
-            trigger: ".community-wall",
-            start: "top 80%",
+            trigger: ".masonry-grid",
+            start: "top 85%",
         },
-        scale: 0.8,
+        y: 50,
         opacity: 0,
-        duration: 1,
-        stagger: {
-            amount: 1,
-            from: "center" // 从中间向四周扩散
-        },
-        ease: "elastic.out(1, 0.5)"
+        duration: 0.8,
+        stagger: 0.1,
+        ease: "power2.out"
     });
 }

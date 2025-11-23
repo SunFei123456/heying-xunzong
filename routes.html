@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,10 +9,11 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/routes.css">
 </head>
+
 <body>
 
     <!-- 导航栏 -->
-    <nav id="navbar" class="navbar scrolled">
+    <nav id="navbar" class="navbar">
         <div class="nav-content">
             <div class="logo">
                 <a href="index.html" class="flex items-center gap-2">
@@ -31,8 +33,25 @@
         </div>
     </nav>
 
+    <!-- Hero Section -->
+    <header class="hero">
+        <div id="hero-bg">
+            <img src="https://images.unsplash.com/photo-1526494631344-8c6faa6dfabb?q=80&w=2071&auto=format&fit=crop"
+                alt="鹤游线路">
+        </div>
+        <div class="container">
+            <div class="hero-content">
+                <span class="hero-subtitle">Discovery Routes</span>
+                <h1 class="hero-title">鹤游线路</h1>
+                <div class="hero-cta">
+                    <a href="#routes" class="btn">开启旅程</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
     <!-- 鹤游线路 -->
-    <section id="routes" class="section-routes" style="padding-top: 120px;">
+    <section id="routes" class="section-routes">
         <div class="container">
             <div class="section-title">
                 <span class="sub">Discovery Routes</span>
@@ -40,12 +59,13 @@
                 <div class="divider"></div>
                 <p>古村探秘，山水助农，定制您的专属旅程。</p>
             </div>
-            
+
             <div class="routes-container">
                 <!-- 线路 1: 古村非遗 -->
                 <div class="route-row">
                     <div class="route-img">
-                        <img src="https://images.unsplash.com/photo-1526494631344-8c6faa6dfabb?q=80&w=2071&auto=format&fit=crop" alt="古村非遗">
+                        <img src="https://images.unsplash.com/photo-1526494631344-8c6faa6dfabb?q=80&w=2071&auto=format&fit=crop"
+                            alt="古村非遗">
                     </div>
                     <div class="route-content">
                         <span class="route-tag">定制路线</span>
@@ -67,7 +87,8 @@
                 <!-- 线路 2: 山水助农 -->
                 <div class="route-row reverse">
                     <div class="route-img">
-                        <img src="https://images.unsplash.com/photo-1467048277345-4160f6e93c28?q=80&w=2024&auto=format&fit=crop" alt="山水助农">
+                        <img src="https://images.unsplash.com/photo-1467048277345-4160f6e93c28?q=80&w=2024&auto=format&fit=crop"
+                            alt="山水助农">
                     </div>
                     <div class="route-content">
                         <span class="route-tag">体验游</span>
@@ -85,25 +106,116 @@
                         <a href="#" class="text-link">查看详情 <i class="ri-arrow-right-line"></i></a>
                     </div>
                 </div>
+            </div>
+        </div>
+    </section>
 
-                <!-- 线路 3: 景区畅游 -->
-                <div class="route-row">
-                    <div class="route-img">
-                        <img src="https://images.unsplash.com/photo-1478131143081-80f7f84ca84d?q=80&w=2070&auto=format&fit=crop" alt="景区畅游">
+    <!-- 鹤望景区 -->
+    <section id="spots" class="section-spots">
+        <div class="container">
+            <div class="section-title">
+                <span class="sub">Scenic Spots</span>
+                <h2>鹤望景区</h2>
+                <div class="divider"></div>
+                <p>寻访名胜古迹，感受千年古都的独特魅力。</p>
+            </div>
+
+            <div class="spots-grid">
+                <!-- 1. 摘星台 -->
+                <div class="spot-card">
+                    <div class="spot-img">
+                        <img src="https://images.unsplash.com/photo-1599707367072-cd6ad66acc40?q=80&w=1974&auto=format&fit=crop"
+                            alt="摘星台">
                     </div>
-                    <div class="route-content">
-                        <span class="route-tag">景点门票</span>
-                        <h3>鹤望景区畅游</h3>
-                        <p class="route-desc">云梦山、大伾山一票通玩。包含景区门票预订、直通车服务及智能语音讲解。</p>
-                        <div class="route-details">
-                            <p><strong>服务内容：</strong>全天候电子导览、景区直通车往返接送、特惠联票。</p>
+                    <div class="spot-info">
+                        <h3>摘星台</h3>
+                        <p class="spot-desc">摘星台景区是当年纣王和妲己观朝渋摘比干心处，是重要的朝歌文化遗存。内有殷朝六七圣贤君故都碑、麒麟壁、林坚台等景点50余处，是研究古代历史的实物资料。
+                        </p>
+                        <div class="spot-footer">
+                            <span class="location"><i class="ri-map-pin-line"></i> 淇县</span>
+                            <a href="#" class="btn-sm">查看详情</a>
                         </div>
-                        <ul class="route-features">
-                            <li><i class="ri-ticket-2-line"></i> 门票特惠</li>
-                            <li><i class="ri-smartphone-line"></i> 智能导览</li>
-                            <li><i class="ri-bus-line"></i> 交通接驳</li>
-                        </ul>
-                        <a href="#" class="text-link">立即预订 <i class="ri-arrow-right-line"></i></a>
+                    </div>
+                </div>
+
+                <!-- 2. 朝歌老街 -->
+                <div class="spot-card">
+                    <div class="spot-img">
+                        <img src="https://images.unsplash.com/photo-1566241496511-1a0af1017480?q=80&w=2070&auto=format&fit=crop"
+                            alt="朝歌老街">
+                    </div>
+                    <div class="spot-info">
+                        <h3>朝歌老街</h3>
+                        <p class="spot-desc">河南省首批历史文化街区，位于朝歌古城中心位置，明清时期称为大街。长期以来一直是城区最繁华的商业街区，夜间文旅消费集聚区。</p>
+                        <div class="spot-footer">
+                            <span class="location"><i class="ri-map-pin-line"></i> 朝歌古城</span>
+                            <span class="ticket-price free">免费</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 3. 大伾山 -->
+                <div class="spot-card">
+                    <div class="spot-img">
+                        <img src="https://images.unsplash.com/photo-1600610959212-6344f6235015?q=80&w=1974&auto=format&fit=crop"
+                            alt="大伾山">
+                    </div>
+                    <div class="spot-info">
+                        <h3>大伾山</h3>
+                        <p class="spot-desc">千里平原上突起的秀丽青石山峰，国保文物单位。唐代的石刻瑰宝千佛洞是中原石刻艺术的精典之作，包括大伾山、浮丘山两座山峰。</p>
+                        <div class="spot-footer">
+                            <span class="location"><i class="ri-map-pin-line"></i> 浚县</span>
+                            <span class="ticket-price">¥ 60.00</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 4. 浚县古城 -->
+                <div class="spot-card">
+                    <div class="spot-img">
+                        <img src="https://images.unsplash.com/photo-1543076066-2d7972719090?q=80&w=1974&auto=format&fit=crop"
+                            alt="浚县古城">
+                        <span class="spot-badge free">免费</span>
+                    </div>
+                    <div class="spot-info">
+                        <h3>浚县古城</h3>
+                        <p class="spot-desc">河南省唯一的县级国家历史文化名城。将古城墙、世袭翰林府、关圣庙、明清四合院、县衙、文庙联合一起，着重体现千年文化传承。</p>
+                        <div class="spot-footer">
+                            <span class="location"><i class="ri-map-pin-line"></i> 浚县</span>
+                            <span class="ticket-price free">免费</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 5. 朝歌文化公园 -->
+                <div class="spot-card">
+                    <div class="spot-img">
+                        <img src="https://images.unsplash.com/photo-1519373344801-14c1f9539c9c?q=80&w=2070&auto=format&fit=crop"
+                            alt="朝歌文化公园">
+                    </div>
+                    <div class="spot-info">
+                        <h3>朝歌文化公园</h3>
+                        <p class="spot-desc">以鹿台遗址为核心的大型殷商主题公园。鹿台被誉为“中华第一古金库”，是民间财神之源。这里是殷商文化核心区，因《封神榜》闻名遐迩。</p>
+                        <div class="spot-footer">
+                            <span class="location"><i class="ri-map-pin-line"></i> 淇河旁</span>
+                            <span class="ticket-price free">免费</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 6. 云梦山 -->
+                <div class="spot-card">
+                    <div class="spot-img">
+                        <img src="https://images.unsplash.com/photo-1479030160180-b1860951d6ec?q=80&w=2070&auto=format&fit=crop"
+                            alt="云梦山">
+                    </div>
+                    <div class="spot-info">
+                        <h3>云梦山</h3>
+                        <p class="spot-desc">被誉为“青岩仙境”，由战国古军庠、上圣古庙、五里鬼谷大峡谷、云梦大草原组成。鬼谷子隐居授徒之所，中国古代军事思想研究基地。</p>
+                        <div class="spot-footer">
+                            <span class="location"><i class="ri-map-pin-line"></i> 淇县</span>
+                            <span class="ticket-price">¥ 75.00</span>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -139,4 +251,5 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/ScrollTrigger.min.js"></script>
     <script src="js/main.js"></script>
 </body>
+
 </html>
