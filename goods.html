@@ -17,6 +17,7 @@
         <div class="nav-content">
             <div class="logo">
                 <a href="index.html" class="flex items-center gap-2">
+                    <img class="logo-image" src="images/logo.png" alt="鹤影寻踪 Logo">
                     <span class="logo-dot"></span>
                     鹤影寻踪
                 </a>
@@ -24,7 +25,7 @@
             <div class="nav-links">
                 <a href="classroom.html">鹤韵课堂</a>
                 <a href="routes.html">鹤游线路</a>
-                <a href="goods.html" style="color: var(--color-red);">鹤乡好物</a>
+                <a href="goods.html" style="color: #84ff60;">鹤乡好物</a>
                 <a href="community.html">鹤友社群</a>
             </div>
             <div class="mobile-menu-btn">
@@ -36,7 +37,7 @@
     <!-- Hero Section -->
     <header class="hero">
         <div id="hero-bg">
-            <img src="https://images.unsplash.com/photo-1550989460-0adf9ea622e2?q=80&w=1974&auto=format&fit=crop"
+            <img src="./images/goods-banner.avif"
                 alt="鹤乡好物">
         </div>
         <div class="container">
@@ -57,92 +58,238 @@
                 <span class="sub">Local Treasures</span>
                 <h2>鹤乡好物</h2>
                 <div class="divider"></div>
-                <p>淇河三珍，浚县花生，非遗文创专区。</p>
+                <p>淇河三珍，特色农产，历史名吃，非遗好礼。</p>
             </div>
 
             <div class="goods-showcase">
                 <!-- 分类导航 -->
                 <div class="goods-tabs">
-                    <span class="active">全部</span>
-                    <span>助农产品</span>
-                    <span>非遗文创</span>
-                    <span>特色美食</span>
+                    <span class="active" data-filter="all">全部</span>
+                    <span data-filter="specialty">淇河三珍</span>
+                    <span data-filter="food">特色美食</span>
+                    <span data-filter="culture">非遗文创</span>
                 </div>
 
                 <div class="goods-grid">
-                    <!-- 商品 1 -->
-                    <div class="good-card">
+                    <!-- 1. 淇河鲫鱼 -->
+                    <div class="good-card" data-category="specialty">
                         <div class="good-img-box">
-                            <img src="https://images.unsplash.com/photo-1583216021697-01b911534f12?q=80&w=2070&auto=format&fit=crop"
-                                alt="淇河鸭蛋">
+                            <img src="./images/g1.jpg"
+                                alt="淇河鲫鱼">
                             <div class="good-actions">
-                                <i class="ri-shopping-cart-line"></i>
+                                <i class="ri-eye-line"></i>
+                            </div>
+                        </div>
+                        <div class="good-info">
+                            <h4>淇河鲫鱼 (双背鲫鱼)</h4>
+                            <p class="desc">河南四大珍奇水生动物之一，肉质细嫩无腥，骨刺细少，明代贡品。</p>
+                            <div class="full-desc" style="display: none;">
+                                <p><strong>产地：</strong>仅产于鹤壁淇河（河南唯一未受污染的河流）。</p>
+                                <p><strong>特点：</strong>因脊背宽厚呈“双脊”形态，又称“双背鲫鱼”。色泽金黄、肉质细嫩无腥，骨刺细少；富含蛋白质、钙、铁及维生素。</p>
+                                <p><strong>功效：</strong>有补虚强身、滋养脾胃的功效。</p>
+                                <p><strong>文化：</strong>《诗经》中“以钓于淇”即描述淇河垂钓场景，明代列为贡品。</p>
+                            </div>
+                            <div class="price-row">
+                                <span class="price">时价</span>
+                                <span class="sold">仅限到店</span>
+                            </div>
+                            <button class="btn pre-order-btn" data-name="淇河鲫鱼 (双背鲫鱼)">预购提醒</button>
+                        </div>
+                    </div>
+
+                    <!-- 2. 缠丝鸭蛋 -->
+                    <div class="good-card" data-category="specialty">
+                        <div class="good-img-box">
+                            <img src="./images/g2.avif"
+                                alt="淇河缠丝鸭蛋">
+                            <div class="good-actions">
+                                <i class="ri-eye-line"></i>
                             </div>
                         </div>
                         <div class="good-info">
                             <h4>淇河缠丝鸭蛋</h4>
-                            <p class="desc">蛋黄鲜红，口感沙软，营养丰富。</p>
+                            <p class="desc">煮熟后蛋黄呈“金丝伴银线”环形纹理，获巴拿马金奖，国家地理标志产品。</p>
+                            <div class="full-desc" style="display: none;">
+                                <p><strong>产地：</strong>仅产于淇河中下游，因当地水体含锂、锶等微量元素，且鸭群以淇河鲫鱼为食，形成独特品质。</p>
+                                <p><strong>特点：</strong>煮熟后蛋黄呈红黄相间的环形纹理（“金丝伴银线”），高蛋白（13.8%）、低脂肪（1.72%），钙含量是普通鸭蛋的4.6倍。</p>
+                                <p><strong>荣誉：</strong>明清为贡品，1914年获巴拿马万国博览会金奖，2012年获国家农产品地理标志认证。</p>
+                            </div>
                             <div class="price-row">
                                 <span class="price">¥ 68.00</span>
-                                <span class="sold">已售 1000+</span>
+                                <span class="sold">已售 2000+</span>
                             </div>
+                            <button class="btn pre-order-btn" data-name="淇河缠丝鸭蛋">预购提醒</button>
                         </div>
                     </div>
 
-                    <!-- 商品 2 -->
-                    <div class="good-card">
+                    <!-- 3. 无核枣 -->
+                    <div class="good-card" data-category="specialty">
                         <div class="good-img-box">
-                            <img src="https://images.unsplash.com/photo-1627486770789-354a02a54474?q=80&w=1933&auto=format&fit=crop"
-                                alt="浚县花生">
+                            <img src="./images/g3.jpg"
+                                alt="无核枣">
                             <div class="good-actions">
-                                <i class="ri-shopping-cart-line"></i>
+                                <i class="ri-eye-line"></i>
                             </div>
                         </div>
                         <div class="good-info">
-                            <h4>浚县大花生</h4>
-                            <p class="desc">颗粒饱满，香脆可口，农家自种。</p>
+                            <h4>淇县无核枣</h4>
+                            <p class="desc">形似玉坠，肉厚细腻，空心无核有软仁，维生素含量极高，周朝贡品。</p>
+                            <div class="full-desc" style="display: none;">
+                                <p><strong>产地：</strong>仅产于淇县西部鹿台山区，由野生酸枣嫁接而来，移植到十里外则核会变硬。</p>
+                                <p><strong>特点：</strong>色泽鲜红、形似玉坠，肉厚细腻、空心无核但有软仁（核可食用），糖分及维生素含量极高。</p>
+                                <p><strong>历史：</strong>3000多年栽培史，周朝列为贡品，1983年被中科院定名为“软核蜜枣”。</p>
+                            </div>
+                            <div class="price-row">
+                                <span class="price">¥ 45.00</span>
+                                <span class="sold">热销中</span>
+                            </div>
+                            <button class="btn pre-order-btn" data-name="淇县无核枣">预购提醒</button>
+                        </div>
+                    </div>
+
+                    <!-- 4. 王桥豆腐 -->
+                    <div class="good-card" data-category="food">
+                        <div class="good-img-box">
+                            <img src="./images/g4.jpg"
+                                alt="王桥豆腐">
+                            <div class="good-actions">
+                                <i class="ri-eye-line"></i>
+                            </div>
+                        </div>
+                        <div class="good-info">
+                            <h4>浚县王桥豆腐</h4>
+                            <p class="desc">市级非遗，淇河水磨制，煮不烂、炒不碎，豆香浓郁，质地细嫩。</p>
+                            <div class="full-desc" style="display: none;">
+                                <p><strong>介绍：</strong>浚县王桥豆腐是市级非物质文化遗产。</p>
+                                <p><strong>工艺：</strong>选用优质大豆，引用淇河水，经过精选、浸泡、磨浆、由浆、点脑、压制等多道工序精制而成。</p>
+                                <p><strong>口感：</strong>皮薄肉嫩，质地细腻，味道纯正，久煮不烂，煎炒不碎。</p>
+                            </div>
+                            <div class="price-row">
+                                <span class="price">¥ 15.00</span>
+                                <span class="sold">每日鲜制</span>
+                            </div>
+                            <button class="btn pre-order-btn" data-name="浚县王桥豆腐">预购提醒</button>
+                        </div>
+                    </div>
+
+                    <!-- 5. 吴二锅花生 -->
+                    <div class="good-card" data-category="food">
+                        <div class="good-img-box">
+                            <img src="./images/g5.jpg"
+                                alt="吴二锅花生">
+                            <div class="good-actions">
+                                <i class="ri-eye-line"></i>
+                            </div>
+                        </div>
+                        <div class="good-info">
+                            <h4>吴二锅花生</h4>
+                            <p class="desc">浚县特产，古法炒制，香酥入味，非遗美食代表，回味无穷。</p>
+                            <div class="full-desc" style="display: none;">
+                                <p><strong>介绍：</strong>吴二锅花生是浚县特产，当地非遗美食代表之一。</p>
+                                <p><strong>工艺：</strong>采用传统古法技艺炒制，火候掌握恰到好处。</p>
+                                <p><strong>特点：</strong>果仁酥脆，五香味浓，咸淡适中，食之满口留香，回味无穷。</p>
+                            </div>
                             <div class="price-row">
                                 <span class="price">¥ 29.90</span>
                                 <span class="sold">已售 5000+</span>
                             </div>
+                            <button class="btn pre-order-btn" data-name="吴二锅花生">预购提醒</button>
                         </div>
                     </div>
 
-                    <!-- 商品 3 -->
-                    <div class="good-card">
+                    <!-- 6. 冬凌草茶 -->
+                    <div class="good-card" data-category="food">
                         <div class="good-img-box">
-                            <img src="https://images.unsplash.com/photo-1606758669514-680353e55e33?q=80&w=2070&auto=format&fit=crop"
+                            <img src="./images/g6.jpg"
+                                alt="冬凌草茶">
+                            <div class="good-actions">
+                                <i class="ri-eye-line"></i>
+                            </div>
+                        </div>
+                        <div class="good-info">
+                            <h4>鹤壁冬凌草茶</h4>
+                            <p class="desc">太行山区特产，含36种药用成分，清热解毒，被《中国药典》收录。</p>
+                            <div class="full-desc" style="display: none;">
+                                <p><strong>产地：</strong>鹤壁太行山区特产。</p>
+                                <p><strong>成分：</strong>含冬凌草甲素、乙素等36种药用成分。</p>
+                                <p><strong>功效：</strong>具有清热解毒、消炎止痛、健胃活血之功效。被誉为“神茶”，被《中国药典》收录。</p>
+                            </div>
+                            <div class="price-row">
+                                <span class="price">¥ 58.00</span>
+                                <span class="sold">健康首选</span>
+                            </div>
+                            <button class="btn pre-order-btn" data-name="鹤壁冬凌草茶">预购提醒</button>
+                        </div>
+                    </div>
+
+                    <!-- 7. 泥咕咕 -->
+                    <div class="good-card" data-category="culture">
+                        <div class="good-img-box">
+                            <img src="./images/g7.jpg"
                                 alt="泥咕咕">
                             <div class="good-actions">
-                                <i class="ri-shopping-cart-line"></i>
+                                <i class="ri-eye-line"></i>
                             </div>
                         </div>
                         <div class="good-info">
                             <h4>非遗泥咕咕 (手绘版)</h4>
-                            <p class="desc">国家级非遗，纯手工捏制，独一无二。</p>
+                            <p class="desc">国家级非遗，纯手工捏制，独一无二，造型古朴，色彩艳丽。</p>
+                            <div class="full-desc" style="display: none;">
+                                <p><strong>介绍：</strong>浚县泥咕咕是国家级非物质文化遗产，中国第一批非物质文化遗产。</p>
+                                <p><strong>工艺：</strong>以黄河胶泥为原料，经练泥、捏塑、晾晒、烧制、彩绘等多道工序制成。</p>
+                                <p><strong>特色：</strong>因其尾部有两个小孔，吹之发出“咕咕”的声音而得名。造型古朴，色彩艳丽，具有浓厚的乡土气息。</p>
+                            </div>
                             <div class="price-row">
                                 <span class="price">¥ 128.00</span>
                                 <span class="sold">限量发售</span>
                             </div>
+                            <button class="btn pre-order-btn" data-name="非遗泥咕咕 (手绘版)">预购提醒</button>
                         </div>
                     </div>
 
-                    <!-- 商品 4 -->
-                    <div class="good-card">
+                    <!-- 8. 剪纸画 -->
+                    <div class="good-card" data-category="culture">
                         <div class="good-img-box">
-                            <img src="https://images.unsplash.com/photo-1589590993388-17c004929b8e?q=80&w=2070&auto=format&fit=crop"
+                            <img src="./images/g8.png"
                                 alt="剪纸画">
                             <div class="good-actions">
-                                <i class="ri-shopping-cart-line"></i>
+                                <i class="ri-eye-line"></i>
                             </div>
                         </div>
                         <div class="good-info">
                             <h4>鹤壁剪纸装饰画</h4>
-                            <p class="desc">精细刻画，装裱精美，家居装饰佳品。</p>
+                            <p class="desc">精细刻画，装裱精美，家居装饰佳品，展现传统民间艺术魅力。</p>
+                            <div class="full-desc" style="display: none;">
+                                <p><strong>介绍：</strong>鹤壁剪纸艺术源远流长，是传统民间艺术的瑰宝。</p>
+                                <p><strong>工艺：</strong>艺人以剪刀代笔，在红纸上剪出花鸟鱼虫、人物故事等各种图案。</p>
+                                <p><strong>用途：</strong>装裱精美，适合家居装饰、馈赠亲友，具有很高的艺术欣赏和收藏价值。</p>
+                            </div>
                             <div class="price-row">
                                 <span class="price">¥ 88.00</span>
                                 <span class="sold">非遗匠心</span>
                             </div>
+                            <button class="btn pre-order-btn" data-name="鹤壁剪纸装饰画">预购提醒</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 产业现状板块 -->
+                <div class="industry-section" style="margin-top: 80px; background: white; padding: 40px; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.05);">
+                    <h3 style="font-family: var(--font-serif); margin-bottom: 30px; text-align: center; font-size: 1.8rem; color: var(--color-ink);">
+                        <i class="ri-seedling-line" style="color: var(--color-bamboo); margin-right: 10px;"></i>产业发展现状
+                    </h3>
+                    <div class="industry-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px;">
+                        <div class="industry-card">
+                            <h4 style="color: var(--color-red); margin-bottom: 15px; font-size: 1.2rem;">品牌化运营</h4>
+                            <p style="color: #666; line-height: 1.6;">“淇河三珍”已成为鹤壁农业名片，通过“非遗+电商”“传承人+农户直播”等模式推广，进入全国市场。</p>
+                        </div>
+                        <div class="industry-card">
+                            <h4 style="color: var(--color-red); margin-bottom: 15px; font-size: 1.2rem;">融合新业态</h4>
+                            <p style="color: #666; line-height: 1.6;">在浚县古城、桑园小镇等景区设“三珍馆”，推出鲫鱼汤、缠丝鸭蛋炒饭、无核枣糕等美食体验。</p>
+                        </div>
+                        <div class="industry-card">
+                            <h4 style="color: var(--color-red); margin-bottom: 15px; font-size: 1.2rem;">标准化生产</h4>
+                            <p style="color: #666; line-height: 1.6;">缠丝鸭蛋、无核枣等已建立种植/养殖标准，部分产品通过有机认证，确保品质优良。</p>
                         </div>
                     </div>
                 </div>
@@ -178,6 +325,52 @@
             </div>
         </div>
     </footer>
+
+    <!-- 商品详情弹窗 -->
+    <div id="goods-modal" class="modal-overlay">
+        <div class="modal-content">
+            <button class="modal-close"><i class="ri-close-line"></i></button>
+            <div class="modal-header">
+                <h3 id="goods-modal-title"></h3>
+            </div>
+            <div class="modal-body">
+                <div class="goods-modal-img">
+                    <img id="goods-modal-img" src="" alt="">
+                </div>
+                <div class="goods-modal-text" id="goods-modal-desc"></div>
+                <div class="goods-modal-price" id="goods-modal-price"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 预购弹窗 -->
+    <div id="preorder-modal" class="modal-overlay">
+        <div class="modal-content">
+            <button class="modal-close"><i class="ri-close-line"></i></button>
+            <div class="modal-header">
+                <h3 id="preorder-title">预购提醒</h3>
+            </div>
+            <div class="modal-body">
+                <p>留下联系方式，商品一上架立刻通知您：</p>
+                <form id="preorder-form">
+                    <div class="form-field">
+                        <label>商品</label>
+                        <input type="text" id="preorder-product" readonly>
+                    </div>
+                    <div class="form-field">
+                        <label>手机号</label>
+                        <input type="tel" id="preorder-phone" placeholder="请输入手机号" required>
+                    </div>
+                    <div class="form-field">
+                        <label>备注</label>
+                        <textarea id="preorder-note" placeholder="口味偏好 / 配送需求"></textarea>
+                    </div>
+                    <button type="submit" class="btn">提交预购</button>
+                </form>
+                <p id="preorder-success" class="success-tip" style="display:none;">提交成功，我们会尽快与您联系。</p>
+            </div>
+        </div>
+    </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/ScrollTrigger.min.js"></script>

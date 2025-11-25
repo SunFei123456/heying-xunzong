@@ -48,6 +48,19 @@
     padding: 0 20px;
 }
 
+/* 首屏 logo 展示，突出品牌身份 */
+.hero-logo {
+    display: inline-flex;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+}
+
+.hero-logo img {
+    width: 120px;
+    height: auto;
+    filter: drop-shadow(0 10px 25px rgba(0,0,0,0.35));
+}
+
 .hero-subtitle {
     font-size: 1.2rem;
     letter-spacing: 0.5em;

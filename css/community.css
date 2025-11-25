@@ -87,6 +87,11 @@
     margin-bottom: 40px;
 }
 
+/* 笔记卡片隐藏状态 */
+.note-card.hidden {
+    display: none;
+}
+
 /* 笔记卡片 */
 .note-card {
     break-inside: avoid;
@@ -131,6 +136,7 @@
     border-radius: 4px;
     font-size: 0.75rem;
     font-weight: 500;
+    display: none; /* 隐藏标签 */
 }
 
 .note-content {
@@ -175,6 +181,7 @@
     height: 24px;
     border-radius: 50%;
     object-fit: cover;
+    display: none; /* 隐藏头像 */
 }
 
 .user-info span {

@@ -17,6 +17,7 @@
         <div class="nav-content">
             <div class="logo">
                 <a href="index.html" class="flex items-center gap-2">
+                    <img class="logo-image" src="images/logo.png" alt="鹤影寻踪 Logo">
                     <span class="logo-dot"></span>
                     鹤影寻踪
                 </a>
@@ -25,7 +26,7 @@
                 <a href="classroom.html">鹤韵课堂</a>
                 <a href="routes.html">鹤游线路</a>
                 <a href="goods.html">鹤乡好物</a>
-                <a href="community.html" style="color: var(--color-red);">鹤友社群</a>
+                <a href="community.html" style="color: #84ff60;">鹤友社群</a>
             </div>
             <div class="mobile-menu-btn">
                 <i class="ri-menu-line"></i>
@@ -36,7 +37,7 @@
     <!-- Hero Section -->
     <header class="hero">
         <div id="hero-bg">
-            <img src="https://images.unsplash.com/photo-1523906834658-6e24ef2386f9?q=80&w=1883&auto=format&fit=crop"
+            <img src="./images/community-banner.webp"
                 alt="鹤友社群">
         </div>
         <div class="container">
@@ -56,11 +57,11 @@
             <!-- 顶部话题分类 -->
             <div class="community-header">
                 <div class="topic-filters">
-                    <button class="topic-btn active">全部</button>
-                    <button class="topic-btn"><i class="ri-camera-lens-line"></i> 摄影打卡</button>
-                    <button class="topic-btn"><i class="ri-restaurant-2-line"></i> 美食探店</button>
-                    <button class="topic-btn"><i class="ri-ancient-pavilion-line"></i> 文化交流</button>
-                    <button class="topic-btn"><i class="ri-question-answer-line"></i> 问答求助</button>
+                    <button class="topic-btn active" data-filter="all">全部</button>
+                    <button class="topic-btn" data-filter="photography"><i class="ri-camera-lens-line"></i> 摄影打卡</button>
+                    <button class="topic-btn" data-filter="food"><i class="ri-restaurant-2-line"></i> 美食探店</button>
+                    <button class="topic-btn" data-filter="culture"><i class="ri-ancient-pavilion-line"></i> 文化交流</button>
+                    <button class="topic-btn" data-filter="qa"><i class="ri-question-answer-line"></i> 问答求助</button>
                 </div>
                 <button class="btn-primary-outline"><i class="ri-add-line"></i> 发布笔记</button>
             </div>
@@ -68,14 +69,15 @@
             <!-- 瀑布流内容 -->
             <div class="masonry-grid">
                 <!-- 笔记卡片 1 -->
-                <div class="note-card">
+                <div class="note-card" data-category="photography">
                     <div class="note-img">
-                        <img src="https://images.unsplash.com/photo-1523906834658-6e24ef2386f9?q=80&w=1883&auto=format&fit=crop"
+                        <img src="./images/c1.jpg"
                             alt="古村">
                         <span class="note-tag">摄影</span>
                     </div>
                     <div class="note-content">
-                        <h3 class="note-title">藏在深山里的千年古村，美哭了！</h3>
+                        <h3 class="note-title">朝歌古韵，梦回商周</h3>
+                        <p class="note-desc">走进这片古老的土地，仿佛能听到千年前的历史回响，每一块砖瓦都在诉说故事。</p>
                         <div class="note-footer">
                             <div class="user-info">
                                 <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Avatar">
@@ -89,15 +91,15 @@
                 </div>
 
                 <!-- 笔记卡片 2 -->
-                <div class="note-card">
+                <div class="note-card" data-category="photography">
                     <div class="note-img">
-                        <img src="https://images.unsplash.com/photo-1600610959212-6344f6235015?q=80&w=1974&auto=format&fit=crop"
+                        <img src="./images/c2.jpg"
                             alt="大伾山">
                         <span class="note-tag">攻略</span>
                     </div>
                     <div class="note-content">
-                        <h3 class="note-title">大伾山一日游保姆级攻略，建议收藏！</h3>
-                        <p class="note-desc">从郑州出发，只要2小时就能到达这个宝藏景点...</p>
+                        <h3 class="note-title">淇水悠悠，一日闲游指南</h3>
+                        <p class="note-desc">沿着淇河漫步，感受《诗经》里的浪漫，这份路线图请收好！</p>
                         <div class="note-footer">
                             <div class="user-info">
                                 <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Avatar">
@@ -110,15 +112,33 @@
                     </div>
                 </div>
 
+                <!-- 纯文本笔记卡片 (新增) -->
+                <div class="note-card text-only" data-category="culture">
+                    <div class="note-content">
+                        <span class="note-tag">感悟</span>
+                        <h3 class="note-title">读《诗经·卫风》，方知鹤壁之美</h3>
+                        <p class="note-desc">“瞻彼淇奥，绿竹猗猗。”以前只在书本里读到，真正来到鹤壁，看到淇河两岸的郁郁葱葱，才明白古人诚不欺我。这里真的是一座被诗经浸润的城市。</p>
+                        <div class="note-footer">
+                            <div class="user-info">
+                                <img src="https://randomuser.me/api/portraits/men/45.jpg" alt="Avatar">
+                                <span>文史爱好者</span>
+                            </div>
+                            <div class="note-stats">
+                                <span><i class="ri-heart-line"></i> 256</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
                 <!-- 笔记卡片 3 -->
-                <div class="note-card">
+                <div class="note-card" data-category="culture">
                     <div class="note-img">
-                        <img src="https://images.unsplash.com/photo-1516483638261-f4dbaf036963?q=80&w=1886&auto=format&fit=crop"
+                        <img src="./images/c3.jpg"
                             alt="非遗">
                         <span class="note-tag">文化</span>
                     </div>
                     <div class="note-content">
-                        <h3 class="note-title">第一次体验捏泥咕咕，非遗传承人手把手教学</h3>
+                        <h3 class="note-title">云梦山探秘，鬼谷子隐居地</h3>
                         <div class="note-footer">
                             <div class="user-info">
                                 <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Avatar">
@@ -131,16 +151,34 @@
                     </div>
                 </div>
 
+                <!-- 纯文本笔记卡片 (新增：美食) -->
+                <div class="note-card text-only" data-category="food">
+                    <div class="note-content">
+                        <span class="note-tag">美食</span>
+                        <h3 class="note-title">被缠丝鸭蛋种草了！</h3>
+                        <p class="note-desc">本来以为只是普通的咸鸭蛋，切开一看真的有“金丝伴银线”！口感沙沙的，流油，配上一碗白粥简直绝了。听老板说这是喝淇河水长大的鸭子下的蛋，果然名不虚传。</p>
+                        <div class="note-footer">
+                            <div class="user-info">
+                                <img src="https://randomuser.me/api/portraits/women/12.jpg" alt="Avatar">
+                                <span>吃货小喵</span>
+                            </div>
+                            <div class="note-stats">
+                                <span><i class="ri-heart-line"></i> 178</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
                 <!-- 笔记卡片 4 -->
-                <div class="note-card">
+                <div class="note-card" data-category="photography">
                     <div class="note-img">
-                        <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?q=80&w=1887&auto=format&fit=crop"
-                            alt="云梦山">
+                        <img src="./images/c4.jpg"
+                            alt="浚县古城">
                         <span class="note-tag">摄影</span>
                     </div>
                     <div class="note-content">
-                        <h3 class="note-title">云梦山的日落，是我见过最温柔的颜色</h3>
-                        <p class="note-desc">一定要等到下午6点，光线最好的时候...</p>
+                        <h3 class="note-title">浚县古城社火，热闹非凡！</h3>
+                        <p class="note-desc">正月里的古城是最有年味的，社火表演震撼人心，一定要来现场体验！</p>
                         <div class="note-footer">
                             <div class="user-info">
                                 <img src="https://randomuser.me/api/portraits/men/85.jpg" alt="Avatar">
@@ -153,22 +191,73 @@
                     </div>
                 </div>
 
-                <!-- 笔记卡片 5 -->
-                <div class="note-card">
-                    <div class="note-img">
-                        <img src="https://images.unsplash.com/photo-1543076066-2d7972719090?q=80&w=1974&auto=format&fit=crop"
-                            alt="古城">
-                        <span class="note-tag">探店</span>
-                    </div>
+                <!-- 纯文本笔记卡片 (新增：记忆) -->
+                <div class="note-card text-only" data-category="culture">
                     <div class="note-content">
-                        <h3 class="note-title">浚县古城里的这家咖啡馆，太有感觉了</h3>
+                        <span class="note-tag">记忆</span>
+                        <h3 class="note-title">关于泥咕咕的儿时记忆</h3>
+                        <p class="note-desc">小时候每逢庙会，爷爷总会给我买一个泥咕咕。那朴拙的造型，清脆的哨音，是我童年最珍贵的玩具。现在长大了，看到这些非遗技艺被传承下来，心里真的很感动。</p>
                         <div class="note-footer">
                             <div class="user-info">
-                                <img src="https://randomuser.me/api/portraits/women/22.jpg" alt="Avatar">
-                                <span>CoffeeLover</span>
+                                <img src="https://randomuser.me/api/portraits/men/66.jpg" alt="Avatar">
+                                <span>老鹤壁人</span>
                             </div>
                             <div class="note-stats">
-                                <span><i class="ri-heart-line"></i> 201</span>
+                                <span><i class="ri-heart-line"></i> 420</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 问答笔记卡片 1 -->
+                <div class="note-card text-only" data-category="qa">
+                    <div class="note-content">
+                        <span class="note-tag">求助</span>
+                        <h3 class="note-title">第一次去鹤壁，求推荐必去景点！</h3>
+                        <p class="note-desc">下周末计划去鹤壁旅游，两天时间，请问有哪些必去的景点？特别是《诗经》里提到的地方，很想实地感受一下。住宿和交通有什么建议吗？</p>
+                        <div class="note-footer">
+                            <div class="user-info">
+                                <img src="https://randomuser.me/api/portraits/women/25.jpg" alt="Avatar">
+                                <span>旅行小白</span>
+                            </div>
+                            <div class="note-stats">
+                                <span><i class="ri-heart-line"></i> 89</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 问答笔记卡片 2 -->
+                <div class="note-card text-only" data-category="qa">
+                    <div class="note-content">
+                        <span class="note-tag">咨询</span>
+                        <h3 class="note-title">浚县古城庙会什么时候最热闹？</h3>
+                        <p class="note-desc">听说浚县古城的庙会很出名，想带孩子去体验传统文化。请问庙会一般什么时候举办？有哪些特色活动值得一看？</p>
+                        <div class="note-footer">
+                            <div class="user-info">
+                                <img src="https://randomuser.me/api/portraits/men/38.jpg" alt="Avatar">
+                                <span>奶爸带娃</span>
+                            </div>
+                            <div class="note-stats">
+                                <span><i class="ri-heart-line"></i> 156</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 问答笔记卡片 3 -->
+                <div class="note-card text-only" data-category="qa">
+                    <div class="note-content">
+                        <span class="note-tag">寻物</span>
+                        <h3 class="note-title">求购正宗缠丝鸭蛋，哪里能买到？</h3>
+                        <p class="note-desc">上次去鹤壁朋友家吃了缠丝鸭蛋，回来后一直念念不忘。现在想网购一些，请问哪里能买到正宗的？有推荐的店铺吗？</p>
+                        <div class="note-footer">
+                            <div class="user-info">
+                                <img src="https://randomuser.me/api/portraits/women/52.jpg" alt="Avatar">
+                                <span>美食爱好者</span>
+                            </div>
+                            <div class="note-stats">
+                                <span><i class="ri-heart-line"></i> 234</span>
                             </div>
                         </div>
                     </div>

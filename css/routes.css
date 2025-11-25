@@ -96,6 +96,17 @@
     padding: 20px 0;
 }
 
+.route-actions {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.book-route-btn {
+    flex: none;
+}
+
 .route-features li {
     display: flex;
     align-items: center;
@@ -226,6 +237,7 @@
     border-top: 1px solid #eee;
     padding-top: 15px;
     margin-top: auto;
+    gap: 10px;
 }
 
 .location {
@@ -236,6 +248,21 @@
     gap: 5px;
 }
 
+.spot-book-btn {
+    border: 1px dashed var(--color-bamboo);
+    background: transparent;
+    color: var(--color-bamboo);
+    padding: 6px 16px;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.spot-book-btn:hover {
+    background: var(--color-bamboo);
+    color: #fff;
+}
+
 .ticket-price {
     font-family: var(--font-serif);
     font-size: 1.1rem;
@@ -244,7 +271,7 @@
 }
 
 .ticket-price.free {
-    color: var(--color-bamboo);
+    color: #4CAF50; /* 更鲜艳的绿色 */
 }
 
 /* 响应式 */
@@ -257,5 +284,143 @@
 @media (max-width: 576px) {
     .spots-grid {
         grid-template-columns: 1fr;
+    }
+}
+
+/* =========================================
+   详情弹窗 (Modal)
+   ========================================= */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(4px);
+}
+
+.modal-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.modal-content {
+    background: white;
+    width: 90%;
+    max-width: 600px;
+    border-radius: 12px;
+    padding: 40px;
+    position: relative;
+    transform: translateY(20px);
+    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+    max-height: 80vh;
+    overflow-y: auto;
+}
+
+.modal-overlay.active .modal-content {
+    transform: translateY(0);
+}
+
+.modal-close {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    width: 36px;
+    height: 36px;
+    border: none;
+    background: #f5f5f5;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    color: #666;
+    font-size: 1.2rem;
+}
+
+.modal-close:hover {
+    background: var(--color-red);
+    color: white;
+    transform: rotate(90deg);
+}
+
+.modal-header h3 {
+    font-family: var(--font-serif);
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #eee;
+}
+
+.modal-body p {
+    color: #555;
+    line-height: 1.8;
+    font-size: 1.05rem;
+    text-align: justify;
+}
+
+#booking-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin: 20px 0;
+}
+
+.form-row {
+    display: flex;
+    gap: 20px;
+}
+
+.form-field {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.form-field label {
+    font-size: 0.9rem;
+    color: #777;
+}
+
+.form-field input,
+.form-field textarea {
+    padding: 10px 12px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    background: #fafafa;
+    font-size: 0.95rem;
+    font-family: inherit;
+}
+
+.form-field textarea {
+    min-height: 90px;
+    resize: vertical;
+}
+
+.success-tip {
+    color: var(--color-bamboo);
+    font-weight: 600;
+    text-align: center;
+}
+
+@media (max-width: 576px) {
+    .form-row {
+        flex-direction: column;
+    }
+
+    .route-actions {
+        flex-direction: column;
+        align-items: flex-start;
     }
 }

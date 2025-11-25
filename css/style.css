@@ -142,15 +142,13 @@ img {
     z-index: 1000;
     padding: 20px 40px;
     transition: all 0.5s ease;
-    color: var(--color-paper);
-    mix-blend-mode: difference; 
+    color: var(--color-white); /* 改为纯白 */
 }
 
 .navbar.scrolled {
     background: rgba(0, 0, 0, 0.8);
     backdrop-filter: blur(10px);
     padding: 15px 40px;
-    mix-blend-mode: normal; 
 }
 
 .nav-content {
@@ -166,18 +164,23 @@ img {
     font-size: 1.5rem;
     font-weight: bold;
     letter-spacing: 2px;
+}
+
+.logo a {
     display: flex;
     align-items: center;
     gap: 10px;
 }
 
-.logo-dot {
-    width: 12px;
-    height: 12px;
-    background-color: var(--color-red);
-    border-radius: 50%;
-    display: inline-block;
+/* 导航品牌 logo 图标尺寸控制，确保与文字对齐 */
+.logo-image {
+    width: 36px;
+    height: 36px;
+    object-fit: contain;
+    display: block;
 }
+
+
 
 .nav-links {
     display: flex;
@@ -192,7 +195,7 @@ img {
 }
 
 .nav-links a.active-link, .nav-links a:hover {
-    color: var(--color-red);
+    color: #84ff60;
 }
 
 /* 移动端菜单按钮 */

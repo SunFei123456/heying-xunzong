@@ -17,13 +17,14 @@
         <div class="nav-content">
             <div class="logo">
                 <a href="index.html" class="flex items-center gap-2">
+                    <img class="logo-image" src="images/logo.png" alt="鹤影寻踪 Logo">
                     <span class="logo-dot"></span>
                     鹤影寻踪
                 </a>
             </div>
             <div class="nav-links">
                 <a href="classroom.html">鹤韵课堂</a>
-                <a href="routes.html" style="color: var(--color-red);">鹤游线路</a>
+                <a href="routes.html" style="color: #84ff60;">鹤游线路</a>
                 <a href="goods.html">鹤乡好物</a>
                 <a href="community.html">鹤友社群</a>
             </div>
@@ -36,7 +37,7 @@
     <!-- Hero Section -->
     <header class="hero">
         <div id="hero-bg">
-            <img src="https://images.unsplash.com/photo-1526494631344-8c6faa6dfabb?q=80&w=2071&auto=format&fit=crop"
+            <img src="./images/route-banner.jpeg"
                 alt="鹤游线路">
         </div>
         <div class="container">
@@ -64,7 +65,7 @@
                 <!-- 线路 1: 古村非遗 -->
                 <div class="route-row">
                     <div class="route-img">
-                        <img src="https://images.unsplash.com/photo-1526494631344-8c6faa6dfabb?q=80&w=2071&auto=format&fit=crop"
+                        <img src="./images/banner-new-1.jpg"
                             alt="古村非遗">
                     </div>
                     <div class="route-content">
@@ -80,14 +81,16 @@
                             <li><i class="ri-user-smile-line"></i> 传承人随行</li>
                             <li><i class="ri-gift-line"></i> 作品邮寄</li>
                         </ul>
-                        <a href="#" class="text-link">查看详情 <i class="ri-arrow-right-line"></i></a>
+                        <div class="route-actions">
+                            <a href="JavaScript:;;" class="text-link book-route-btn" data-type="线路" data-title="古村非遗探秘游">预约此路线 <i class="ri-arrow-right-line"></i></a>
+                        </div>
                     </div>
                 </div>
 
                 <!-- 线路 2: 山水助农 -->
                 <div class="route-row reverse">
                     <div class="route-img">
-                        <img src="https://images.unsplash.com/photo-1467048277345-4160f6e93c28?q=80&w=2024&auto=format&fit=crop"
+                        <img src="./images/banner-new-2.jpeg"
                             alt="山水助农">
                     </div>
                     <div class="route-content">
@@ -103,7 +106,9 @@
                             <li><i class="ri-plant-line"></i> 助农集市</li>
                             <li><i class="ri-medal-line"></i> 振兴徽章</li>
                         </ul>
-                        <a href="#" class="text-link">查看详情 <i class="ri-arrow-right-line"></i></a>
+                        <div class="route-actions">
+                            <a href="JavaScript:;;" class="text-link book-route-btn" data-type="线路" data-title="山水助农体验游">预约此路线 <i class="ri-arrow-right-line"></i></a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -124,7 +129,7 @@
                 <!-- 1. 摘星台 -->
                 <div class="spot-card">
                     <div class="spot-img">
-                        <img src="https://images.unsplash.com/photo-1599707367072-cd6ad66acc40?q=80&w=1974&auto=format&fit=crop"
+                        <img src="./images/j1.png"
                             alt="摘星台">
                     </div>
                     <div class="spot-info">
@@ -133,7 +138,8 @@
                         </p>
                         <div class="spot-footer">
                             <span class="location"><i class="ri-map-pin-line"></i> 淇县</span>
-                            <a href="#" class="btn-sm">查看详情</a>
+                            <span class="ticket-price free">免费</span>
+                            <button class="spot-book-btn" data-type="景区" data-title="摘星台">预约参观</button>
                         </div>
                     </div>
                 </div>
@@ -141,15 +147,15 @@
                 <!-- 2. 朝歌老街 -->
                 <div class="spot-card">
                     <div class="spot-img">
-                        <img src="https://images.unsplash.com/photo-1566241496511-1a0af1017480?q=80&w=2070&auto=format&fit=crop"
+                        <img src="./images/j2.png"
                             alt="朝歌老街">
                     </div>
                     <div class="spot-info">
                         <h3>朝歌老街</h3>
-                        <p class="spot-desc">河南省首批历史文化街区，位于朝歌古城中心位置，明清时期称为大街。长期以来一直是城区最繁华的商业街区，夜间文旅消费集聚区。</p>
+                        <p class="spot-desc">朝歌老街，是河南省首批历史文化街区、首批旅游休闲街区、第二批夜间文旅消费集聚区，位于朝歌古城中心位置，明清时期称为大街、鼓楼街、阁北街，长期以来一直是城区最繁华的商业街区。</p>
                         <div class="spot-footer">
                             <span class="location"><i class="ri-map-pin-line"></i> 朝歌古城</span>
-                            <span class="ticket-price free">免费</span>
+                            <button class="spot-book-btn" data-type="景区" data-title="朝歌老街">预约参观</button>
                         </div>
                     </div>
                 </div>
@@ -157,15 +163,16 @@
                 <!-- 3. 大伾山 -->
                 <div class="spot-card">
                     <div class="spot-img">
-                        <img src="https://images.unsplash.com/photo-1600610959212-6344f6235015?q=80&w=1974&auto=format&fit=crop"
+                        <img src="./images/j3.png"
                             alt="大伾山">
                     </div>
                     <div class="spot-info">
                         <h3>大伾山</h3>
-                        <p class="spot-desc">千里平原上突起的秀丽青石山峰，国保文物单位。唐代的石刻瑰宝千佛洞是中原石刻艺术的精典之作，包括大伾山、浮丘山两座山峰。</p>
+                        <p class="spot-desc">大伾山风景区包括大伾山、浮丘山这两座在千里平原上突起的秀丽青石山峰。2001年6月被国务院公布为国保文物，唐代的石刻瑰宝千佛洞是中原石刻艺术的精典之作。</p>
                         <div class="spot-footer">
                             <span class="location"><i class="ri-map-pin-line"></i> 浚县</span>
                             <span class="ticket-price">¥ 60.00</span>
+                            <button class="spot-book-btn" data-type="景区" data-title="大伾山">预约参观</button>
                         </div>
                     </div>
                 </div>
@@ -173,16 +180,17 @@
                 <!-- 4. 浚县古城 -->
                 <div class="spot-card">
                     <div class="spot-img">
-                        <img src="https://images.unsplash.com/photo-1543076066-2d7972719090?q=80&w=1974&auto=format&fit=crop"
+                        <img src="./images/j4.png"
                             alt="浚县古城">
                         <span class="spot-badge free">免费</span>
                     </div>
                     <div class="spot-info">
                         <h3>浚县古城</h3>
-                        <p class="spot-desc">河南省唯一的县级国家历史文化名城。将古城墙、世袭翰林府、关圣庙、明清四合院、县衙、文庙联合一起，着重体现千年文化传承。</p>
+                        <p class="spot-desc">浚县古称黎阳，西汉置县，是河南省唯一的县级国家历史文化名城。浚县古城景区是将古城墙、世袭翰林府、关圣庙、明清四合院、县衙、文庙联合一起的景区，着重体现浚县的千年文化传承。</p>
                         <div class="spot-footer">
                             <span class="location"><i class="ri-map-pin-line"></i> 浚县</span>
                             <span class="ticket-price free">免费</span>
+                            <button class="spot-book-btn" data-type="景区" data-title="浚县古城">预约参观</button>
                         </div>
                     </div>
                 </div>
@@ -190,15 +198,16 @@
                 <!-- 5. 朝歌文化公园 -->
                 <div class="spot-card">
                     <div class="spot-img">
-                        <img src="https://images.unsplash.com/photo-1519373344801-14c1f9539c9c?q=80&w=2070&auto=format&fit=crop"
+                        <img src="./images/j5.png"
                             alt="朝歌文化公园">
                     </div>
                     <div class="spot-info">
                         <h3>朝歌文化公园</h3>
-                        <p class="spot-desc">以鹿台遗址为核心的大型殷商主题公园。鹿台被誉为“中华第一古金库”，是民间财神之源。这里是殷商文化核心区，因《封神榜》闻名遐迩。</p>
+                        <p class="spot-desc">朝歌文化公园以淇河旁省重点文保单位鹿台遗址为核心，是大型殷商主题公园。鹿台相传为殷纣王宫殿区，因《史记》“武王伐纣，散鹿台之财”，被誉为 “中华第一古金库” 和民间财神之源，文财神比干、武财神赵公明皆源于此。这里作为殷商文化核心区，因《封神榜》让朝歌古城闻名遐迩。</p>
                         <div class="spot-footer">
                             <span class="location"><i class="ri-map-pin-line"></i> 淇河旁</span>
                             <span class="ticket-price free">免费</span>
+                            <button class="spot-book-btn" data-type="景区" data-title="朝歌文化公园">预约参观</button>
                         </div>
                     </div>
                 </div>
@@ -206,15 +215,16 @@
                 <!-- 6. 云梦山 -->
                 <div class="spot-card">
                     <div class="spot-img">
-                        <img src="https://images.unsplash.com/photo-1479030160180-b1860951d6ec?q=80&w=2070&auto=format&fit=crop"
+                        <img src="./images/j6.png"
                             alt="云梦山">
                     </div>
                     <div class="spot-info">
                         <h3>云梦山</h3>
-                        <p class="spot-desc">被誉为“青岩仙境”，由战国古军庠、上圣古庙、五里鬼谷大峡谷、云梦大草原组成。鬼谷子隐居授徒之所，中国古代军事思想研究基地。</p>
+                        <p class="spot-desc">云梦山，由战国古军庠、上圣古庙及五里鬼谷大峡谷、云梦大草原四大区域组成，以壮美景色与深厚文化被誉为 “青岩仙境”。这里是纵横家鼻祖鬼谷子隐居授徒之所，孙膑、庞涓等名士皆出于此，其战国古军庠更被确定为 “中国古代军事思想研究基地”。</p>
                         <div class="spot-footer">
                             <span class="location"><i class="ri-map-pin-line"></i> 淇县</span>
                             <span class="ticket-price">¥ 75.00</span>
+                            <button class="spot-book-btn" data-type="景区" data-title="云梦山">预约参观</button>
                         </div>
                     </div>
                 </div>
@@ -246,6 +256,58 @@
             </div>
         </div>
     </footer>
+
+    <!-- 详情弹窗 -->
+    <div id="spot-modal" class="modal-overlay">
+        <div class="modal-content">
+            <button class="modal-close"><i class="ri-close-line"></i></button>
+            <div class="modal-header">
+                <h3 id="modal-title"></h3>
+            </div>
+            <div class="modal-body">
+                <p id="modal-desc"></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- 预约弹窗 -->
+    <div id="booking-modal" class="modal-overlay">
+        <div class="modal-content">
+            <button class="modal-close"><i class="ri-close-line"></i></button>
+            <div class="modal-header">
+                <h3>行程预约</h3>
+            </div>
+            <div class="modal-body">
+                <p>填写信息，我们的行程顾问将在 24 小时内联系您。</p>
+                <form id="booking-form">
+                    <div class="form-field">
+                        <label>预约内容</label>
+                        <input type="text" id="booking-item" readonly>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-field">
+                            <label>出行日期</label>
+                            <input type="date" id="booking-date" required>
+                        </div>
+                        <div class="form-field">
+                            <label>人数</label>
+                            <input type="number" id="booking-people" min="1" value="2" required>
+                        </div>
+                    </div>
+                    <div class="form-field">
+                        <label>联系方式</label>
+                        <input type="tel" id="booking-phone" placeholder="请输入手机号" required>
+                    </div>
+                    <div class="form-field">
+                        <label>备注</label>
+                        <textarea id="booking-note" placeholder="特殊需求 / 集合地点"></textarea>
+                    </div>
+                    <button type="submit" class="btn">提交预约</button>
+                </form>
+                <p id="booking-success" class="success-tip" style="display:none;">预约信息已提交，我们会尽快联系您确认行程。</p>
+            </div>
+        </div>
+    </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/ScrollTrigger.min.js"></script>

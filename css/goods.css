@@ -135,6 +135,21 @@
     align-items: flex-end;
 }
 
+.pre-order-btn {
+    width: 100%;
+    margin-top: 16px;
+    background: transparent;
+    color: var(--color-red);
+    border: 1px dashed var(--color-red);
+    font-size: 0.9rem;
+    cursor: pointer;
+}
+
+.pre-order-btn:hover {
+    background: var(--color-red);
+    color: #fff;
+}
+
 .price {
     color: var(--color-red);
     font-weight: bold;
@@ -173,4 +188,164 @@
     .goods-grid {
         gap: 20px;
     }
+}
+
+/* =========================================
+   商品详情弹窗 (Goods Modal)
+   ========================================= */
+/* 复用 routes.css 的 modal-overlay, modal-content, modal-close 等样式 
+   这里补充商品特有的样式 */
+
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(4px);
+}
+
+.modal-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.modal-content {
+    background: white;
+    width: 90%;
+    max-width: 700px; /* 比景区弹窗稍宽 */
+    border-radius: 12px;
+    padding: 40px;
+    position: relative;
+    transform: translateY(20px);
+    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+    max-height: 90vh;
+    overflow-y: auto;
+}
+
+.modal-overlay.active .modal-content {
+    transform: translateY(0);
+}
+
+.modal-close {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    width: 36px;
+    height: 36px;
+    border: none;
+    background: #f5f5f5;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    color: #666;
+    font-size: 1.2rem;
+}
+
+.modal-close:hover {
+    background: var(--color-red);
+    color: white;
+    transform: rotate(90deg);
+}
+
+.modal-header h3 {
+    font-family: var(--font-serif);
+    font-size: 1.8rem;
+    color: var(--color-ink);
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #eee;
+}
+
+.goods-modal-img {
+    width: 100%;
+    height: 300px;
+    border-radius: 8px;
+    overflow: hidden;
+    margin-bottom: 25px;
+}
+
+.goods-modal-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.goods-modal-text {
+    color: #555;
+    line-height: 1.8;
+    font-size: 1.05rem;
+    text-align: justify;
+    margin-bottom: 20px;
+}
+
+.goods-modal-text p {
+    margin-bottom: 10px;
+}
+
+.goods-modal-text strong {
+    color: var(--color-ink);
+}
+
+.goods-modal-price {
+    font-family: var(--font-serif);
+    font-size: 1.5rem;
+    color: var(--color-red);
+    font-weight: bold;
+    text-align: right;
+    border-top: 1px solid #eee;
+    padding-top: 15px;
+}
+
+#preorder-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin: 20px 0;
+}
+
+.form-field label {
+    font-size: 0.9rem;
+    color: #777;
+    margin-bottom: 6px;
+    display: block;
+}
+
+.form-field input,
+.form-field textarea {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 0.95rem;
+    font-family: inherit;
+    background: #fafafa;
+}
+
+.form-field textarea {
+    min-height: 90px;
+    resize: vertical;
+}
+
+.success-tip {
+    color: var(--color-bamboo);
+    font-weight: 600;
+    text-align: center;
+}
+
+/* 筛选动画相关 */
+.good-card.hidden {
+    display: none; /* 使用 display: none 配合 JS 动画或直接隐藏 */
 }
